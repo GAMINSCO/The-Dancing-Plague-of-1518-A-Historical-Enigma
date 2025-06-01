@@ -1,0 +1,174 @@
+* {
+    margin: 2;
+    padding: 2;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fae1dd;
+    color: black;
+    line-height: 1.6;
+    padding: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #fcd5ce;
+    color: black;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 25px;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 900;
+}
+
+main {
+    max-width: 1500px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+article {
+    background: #ffffffa4;
+    padding: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+article h2 {
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #ffe5d9;
+    color: black;
+    border: none;
+    padding: 0.6rem 1rem;
+    margin-top: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffd7ba;
+}
+
+.left-content {
+    min-width: 300px;
+    flex: 6;
+    padding: 1rem;
+}
+
+.right-content {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 4;
+    padding: 1rem;
+}
+
+.right-content img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark article {
+    background-color: #1e1e1e;
+}
+
+body.dark header {
+    background-color: #222;
+    color: #eee;
+}
+
+body.dark button {
+    background-color: #444;
+}
+
+body.dark button:hover {
+    background-color: #666;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+.timeline {
+    border-left: 4px solid #fec89a;
+    margin: 2rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.timeline-item {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #fec89a;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+    top: 4px;
+}
+
+.timeline-item span {
+    font-weight: bold;
+    color: #fec89a;
+    display: block;
+}
+
+.timeline-item p {
+    margin: 0.25rem 0 0 0;
+}
+
+/* Dark mode timeline dots */
+body.dark .timeline {
+    border-left-color: #888;
+}
+
+body.dark .timeline-item::before {
+    background: #ccc;
+}
+
+
+@media (max-width: 768px) {
+
+    .left-content,
+    .right-content {
+        flex: 0 0 100%;
+    }
+}
